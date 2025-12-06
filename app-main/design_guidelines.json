@@ -1,0 +1,150 @@
+{
+  "identity": {
+    "name": "E1: The Anti-AI Designer",
+    "archetype": "The Cyber-Archivist",
+    "core_philosophy": "Fusion over Imitation. Emotion First. Content is King.",
+    "vibe": "Electric, Precision, Deep Data, Trustworthy."
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Space Grotesk, sans-serif",
+      "weights": ["600", "700"],
+      "usage": "Main page titles, section headers, feature names. Use tight tracking (-0.02em).",
+      "fallback": "system-ui"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Paragraphs, UI labels, form inputs. High legibility.",
+      "fallback": "sans-serif"
+    },
+    "mono": {
+      "font_family": "JetBrains Mono, monospace",
+      "weights": ["400"],
+      "usage": "Data points, code snippets, file metadata, timestamps.",
+      "fallback": "monospace"
+    },
+    "installation": "Import via Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap');"
+  },
+  "colors": {
+    "palette_name": "Electric Void",
+    "mode": "dark",
+    "base": {
+      "background": "#09090b",
+      "foreground": "#f4f4f5",
+      "card": "#18181b",
+      "card_foreground": "#f4f4f5",
+      "border": "#27272a"
+    },
+    "primary": {
+      "default": "#6366f1",
+      "foreground": "#ffffff",
+      "hover": "#4f46e5"
+    },
+    "accent": {
+      "default": "#06b6d4",
+      "foreground": "#000000",
+      "description": "Use for AI-generated highlights and 'magic' moments."
+    },
+    "muted": {
+      "default": "#27272a",
+      "foreground": "#a1a1aa"
+    },
+    "status": {
+      "success": "#10b981",
+      "error": "#ef4444",
+      "warning": "#f59e0b"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 50%)",
+      "beam_border": "linear-gradient(90deg, transparent, #06b6d4, transparent)"
+    }
+  },
+  "visual_enhancers": {
+    "surfaces": [
+      {
+        "name": "Glass Panel",
+        "classes": "bg-zinc-900/60 backdrop-blur-xl border border-white/10 shadow-2xl"
+      },
+      {
+        "name": "Solid Void",
+        "classes": "bg-zinc-950 border border-zinc-800"
+      }
+    ],
+    "borders": {
+      "tracing_beam": "Use a moving gradient mask on borders for active states (uploading, processing).",
+      "subtle": "border-white/5"
+    },
+    "shadows": {
+      "glow": "0 0 20px -5px rgba(99, 102, 241, 0.3)",
+      "deep": "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
+    },
+    "textures": {
+      "noise": "Add a subtle noise overlay (opacity 0.03) to the main background to prevent banding and add tactility."
+    }
+  },
+  "layout_strategy": {
+    "landing_page": {
+      "grid_type": "Mode A: The Tetris Grid",
+      "structure": "Asymmetrical bento grid. Hero section spans full width but uses offset text alignment.",
+      "spacing": "Generous. gap-8 to gap-12."
+    },
+    "dashboard": {
+      "grid_type": "Mode B: The Control Room",
+      "structure": "Dense, data-heavy. Sidebar navigation. Main content area uses a 12-column grid for summary sections.",
+      "spacing": "Tight. gap-4."
+    },
+    "container_rules": "Containers with borders MUST have internal padding (p-6 or p-8)."
+  },
+  "components": {
+    "buttons": {
+      "style": "Sharp corners or small radius (rounded-md). No pill shapes for main actions.",
+      "interaction": "Scale down slightly on click (active:scale-95). Glow on hover."
+    },
+    "cards": {
+      "style": "Flat background, 1px subtle border, no default shadow. Hover lifts card and adds glow.",
+      "usage": "Summary sections, file upload history."
+    },
+    "upload_zone": {
+      "style": "Massive dashed border area. Animated 'marching ants' border when active. Center icon uses 'Tracing Beam' effect.",
+      "interaction": "Drag over highlights the entire zone in Accent color."
+    },
+    "inputs": {
+      "style": "bg-zinc-900/50 border-zinc-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-200"
+    }
+  },
+  "motion": {
+    "philosophy": "Micro-interactions are mandatory. Transitions must be specific (transform, opacity, colors).",
+    "transitions": "transition-all duration-300 ease-out",
+    "entrance": "Staggered fade-in-up for list items and summary sections.",
+    "hover": "Lift (translate-y-1) and Glow."
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1746470427657-eb0b0115455f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRpZ2l0YWwlMjBuZXR3b3JrJTIwYmx1ZXxlbnwwfHx8fDE3NjUwMzExNDF8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract blue digital network lines. Use as a background for the Hero section with an overlay gradient to fade it out at the bottom.",
+      "category": "background"
+    }
+  },
+  "icons": {
+    "library": "lucide-react",
+    "style": "Stroke width 1.5px. Consistent sizing (w-5 h-5 for UI, w-8 h-8 for features)."
+  },
+  "accessibility": {
+    "contrast": "Ensure text is #f4f4f5 on dark backgrounds. Muted text should be #a1a1aa.",
+    "focus_states": "Visible ring-2 ring-indigo-500 ring-offset-2 ring-offset-zinc-950.",
+    "reduced_motion": "Respect prefers-reduced-motion media query."
+  },
+  "universal_guidelines": [
+    "Do NOT use generic centered layouts. Use asymmetry.",
+    "Do NOT use 'Inter' for headings. Use Space Grotesk.",
+    "Do NOT use gradients for text unless it's a very subtle shine.",
+    "Always add data-testid to interactive elements.",
+    "Use 'sonner' for toasts.",
+    "Components must use named exports.",
+    "Pages must use default exports.",
+    "Never use transparent backgrounds without a blur or scrim.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients."
+  ],
+  "instructions_to_main_agent": "Implement the design system defined here. Start by setting up the Tailwind config with the colors and fonts. Then build the layout shell. Finally, implement the specific components (Upload, Summary Display) using the visual enhancers defined."
+}
